@@ -1,0 +1,36 @@
+@media (max-width: 575.98px) 
+    * 
+        margin: 0
+        padding: 0
+
+    body 
+        font-family: 'Open Sans', sans-serif;
+
+    .container 
+        width: 90%
+        margin: 0 auto
+
+    a 
+        text-decoration: none
+
+    .calendar
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    .calendar__header 
+        font-weight: 600
+        font-size: 24px
+
+    .week__column 
+        display: flex
+
+    .column 
+        margin: 0 5px
+        &:first-child .column__days 
+            margin-top: auto
+
+    .column__days 
+        align-items: center
+        display: flex
+        flex-direction: column
