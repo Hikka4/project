@@ -4,7 +4,8 @@
         padding: 0
 
     body 
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif
+        font-size: 14px
 
     .container 
         width: 90%
@@ -13,24 +14,62 @@
     a 
         text-decoration: none
 
-    .calendar
+    .calendar__box 
         display: flex
-        flex-direction: column
-        align-items: center
+        justify-content: center
 
     .calendar__header 
-        font-weight: 600
+        text-align: center
         font-size: 24px
+        font-family: 'Permanent Marker', cursive
+        text-transform: uppercase
+        opacity: .7
+        margin-bottom: 15px
 
-    .week__column 
-        display: flex
+    .calendar__weekNameDay 
+        border-bottom: 1px solid black
+        padding-bottom: 5px
+        margin-bottom: 10px
 
-    .column 
-        margin: 0 5px
-        &:first-child .column__days 
-            margin-top: auto
 
-    .column__days 
-        align-items: center
-        display: flex
-        flex-direction: column
+    .calendar__body 
+        border-bottom: 1px solid black
+
+    .calendar__rows 
+        margin-bottom: 5px
+
+    .weekNameDay
+        display: inline-block
+        width: 30px
+        height: 30px
+        text-align: center
+        font-size: 18px
+        font-family: 'Gloria Hallelujah', cursive
+        font-weight: 600
+        margin-right: 5px
+        &:last-child 
+            margin-right: 0
+
+    .number__day
+        height: 30px
+        width: 33px
+        display: inline-block
+        text-align: center
+        font-family: 'Nunito', sans-serift
+        margin-right: 5px
+        line-height: 30px
+        &:last-child 
+            margin-right: 0
+
+    .numberDayActive 
+        border: 2px solid red
+        border-radius: 50%
+
+    .number__day__empty 
+        width: 33px
+        display: inline-block
+        height: 0
+        margin-right: 5px
+        &:last-child 
+            margin-right: 0
+    
