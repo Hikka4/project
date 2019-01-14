@@ -41,7 +41,7 @@ function addDayCalendar(maxDay) {
     
     let k = 0; // Счетчик строки в которую вносим ячейки
     // Цикл заполняет пустыми ячейками те дни, которые идут до начала месяца
-    for(let i = 0; i < startMonth; i++) {
+    for(let i = 0; i < startMonth-1; i++) {
         row[k].appendChild(createEmpty());
     }
     // Заполняем сами дни в месяц
