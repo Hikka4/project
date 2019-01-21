@@ -16,6 +16,9 @@
   a {
     text-decoration: none;
   }
+  #calendar {
+    background-color: #7878eb;
+  }
   .calendar__box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -23,22 +26,18 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    color: white;
+    padding-bottom: 20px;
   }
   .calendar__header {
     text-align: center;
     font-size: 24px;
-    font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
-    opacity: .7;
     margin-bottom: 15px;
   }
   .calendar__weekNameDay {
-    border-bottom: 1px solid black;
     padding-bottom: 5px;
     margin-bottom: 10px;
-  }
-  .calendar__body {
-    border-bottom: 1px solid black;
   }
   .calendar__rows {
     margin-bottom: 6px;
@@ -49,7 +48,6 @@
     height: 30px;
     text-align: center;
     font-size: 18px;
-    font-family: 'Gloria Hallelujah', cursive;
     font-weight: 600;
     margin-right: 5px;
   }
@@ -57,11 +55,10 @@
     margin-right: 0;
   }
   .number__day {
-    height: 30px;
+    height: 33px;
     width: 33px;
     display: inline-block;
     text-align: center;
-    font-family: 'Nunito', sans-serift;
     margin-right: 5px;
     line-height: 30px;
     cursor: pointer;
@@ -70,8 +67,10 @@
     margin-right: 0;
   }
   .numberDayActive {
-    border: 2px solid red;
+    border: 2px solid #fff;
     border-radius: 50%;
+    color: #4949eb;
+    background-color: #fff;
   }
   .number__day__empty {
     width: 33px;
@@ -81,6 +80,60 @@
   }
   .number__day__empty:last-child {
     margin-right: 0;
+  }
+  .calendar__buttonSetting {
+    position: absolute;
+    right: 10px;
+    top: 280px;
+    padding: 20px 12px 20px 12px;
+    background-color: #773349;
+    border-radius: 50%;
+    outline: none;
+  }
+  .burger__button {
+    cursor: pointer;
+    outline: none;
+  }
+  .burger__button.active {
+    outline: none;
+  }
+  .burger__button.active .rect:first-child {
+    top: 6px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .burger__button.active .rect:nth-child(2) {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .burger__button.active .rect:last-child {
+    top: -6px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .rect {
+    outline: none;
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  .rect:first-child, .rect:nth-child(2), .rect:last-child {
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
   }
 }
 /*# sourceMappingURL=mobile.css.map */

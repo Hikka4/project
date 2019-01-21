@@ -9,10 +9,18 @@ let weekDayName = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 let nowDate = new Date(); 
 let calenadrBody = document.querySelector('.calendar__body');
 let isDay = nowDate.getDate();
+let burgerButton = document.querySelector('.burger__button');
+
+// открытие окна опций
+burgerButton.addEventListener('click', function(e) {
+    burgerButton.classList.toggle('active');
+    
+})
+
 // функция показывает месяц в календаре
 function generationMonthName() {
     let calendarHeader = document.querySelector('.calendar__header');
-    let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let monthName = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
     let nowDate = new Date();
     calendarHeader.textContent = monthName[nowDate.getMonth()];
 }
